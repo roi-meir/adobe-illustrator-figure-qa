@@ -12,14 +12,14 @@
 #include "lib/report.jsx"
 #include "lib/dom/panel.jsx"
 
+// Global config — must be set before any DOM function runs.
+var QA_CONFIG = loadQAConfig();
+
 function runFigureQA() {
     if (app.documents.length === 0) {
         alert("No document open. Please open a document to run the script.");
         return;
     }
-
-    // Load config (default journal; user can override via ~/.figure-qa/config.json).
-    var QA_CONFIG = loadQAConfig();
 
     var doc = app.activeDocument;
     var issues = collectAllIssues(doc);

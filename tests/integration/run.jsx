@@ -10,6 +10,7 @@
 #include "../../illustrator/lib/dom/traverse.jsx"
 #include "../../illustrator/lib/dom/checks.jsx"
 
+var QA_CONFIG = null; // populated per test case in runCase()
 var CASES_DIR_PATH = "";
 var REPORTS_DIR_PATH = "";
 
@@ -58,7 +59,7 @@ function createSyntheticDoc(setup) {
 }
 
 function runCase(caseDef) {
-    var QA_CONFIG = loadQAConfig(caseDef.journal || "default");
+    QA_CONFIG = loadQAConfig(caseDef.journal || "default"); // assign to global
     var doc = createSyntheticDoc(caseDef.setup || {});
     var issues = collectAllIssues(doc);
 
