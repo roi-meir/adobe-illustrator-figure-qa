@@ -1,0 +1,6 @@
+node_modules/
+tests/reports/
+illustrator/lib/core.generated.jsx
+illustrator/install.path.txt
+.DS_Store
+*.log

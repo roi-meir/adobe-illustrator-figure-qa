@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/roi-lab/illustrator-figure-qa/configs/schema.json",
+  "title": "Figure QA Config",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "extends": { "type": "string" },
+    "allowedFontSizes": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 1
+    },
+    "fontSizeTolerance": { "type": "number", "minimum": 0 },
+    "allowedFontFamilies": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "scaleTarget": { "type": "number" },
+    "scaleTolerance": { "type": "number", "minimum": 0 },
+    "minRasterPPI": { "type": "number", "minimum": 1 },
+    "maxFigureWidthMm": { "type": "number", "minimum": 1 },
+    "maxFigureHeightMm": { "type": "number", "minimum": 1 },
+    "figureSizeTolerance": { "type": "number", "minimum": 0 },
+    "highlightLayerName": { "type": "string" },
+    "highlightStrokePt": { "type": "number" },
+    "highlightPaddingPt": { "type": "number" },
+    "highlightColor": {
+      "type": "array",
+      "items": { "type": "number", "minimum": 0, "maximum": 255 },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "checkEnabled": {
+      "type": "object",
+        "properties": {
+        "fontSize": { "type": "boolean" },
+        "fontFamily": { "type": "boolean" },
+        "scale": { "type": "boolean" },
+        "lowResRaster": { "type": "boolean" },
+        "figureSize": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,6 @@
+{
+  "issueCount": { "min": 1 },
+  "checks": {
+    "fontSize": { "min": 1 }
+  }
+}

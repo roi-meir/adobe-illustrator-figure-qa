@@ -1,0 +1,21 @@
+{
+  "name": "illustrator-figure-qa",
+  "version": "0.1.0",
+  "description": "Figure QA utility for Adobe Illustrator: checks font size, font family, scale, and raster PPI.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "npm run build && npm run test:unit",
+    "test:unit": "vitest run",
+    "test:integration": "bash scripts/run-tests.sh",
+    "test:all": "npm run test && npm run test:integration",
+    "install:illustrator": "bash scripts/install.sh"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "vitest": "^2.1.9"
+  }
+}

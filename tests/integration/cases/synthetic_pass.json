@@ -1,0 +1,12 @@
+{
+  "name": "synthetic_pass",
+  "description": "All text uses Arial at 6/7/8 pt at 100% scale — should produce zero issues.",
+  "journal": "default",
+  "setup": {
+    "textFrames": [
+      { "contents": "Good text 6pt",  "size": 6, "font": "ArialMT", "hScale": 100, "vScale": 100 },
+      { "contents": "Good text 7pt",  "size": 7, "font": "ArialMT", "hScale": 100, "vScale": 100 },
+      { "contents": "Good text 8pt",  "size": 8, "font": "ArialMT", "hScale": 100, "vScale": 100 }
+    ]
+  }
+}

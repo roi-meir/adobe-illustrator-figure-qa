@@ -1,0 +1,19 @@
+{
+  "name": "default",
+  "allowedFontSizes": [5, 6, 7, 8],
+  "fontSizeTolerance": 0.05,
+  "allowedFontFamilies": ["Arial", "Arial MT"],
+  "scaleTarget": 100,
+  "scaleTolerance": 0.1,
+  "minRasterPPI": 300,
+  "highlightLayerName": "_QA_HIGHLIGHTS",
+  "highlightStrokePt": 1,
+  "highlightPaddingPt": 2,
+  "highlightColor": [255, 0, 0],
+  "checkEnabled": {
+    "fontSize": true,
+    "fontFamily": true,
+    "scale": true,
+    "lowResRaster": true
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "issueCount": { "min": 1 },
+  "checks": {
+    "scale": { "min": 1, "autoFixable": true }
+  }
+}

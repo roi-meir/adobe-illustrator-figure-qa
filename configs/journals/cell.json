@@ -1,0 +1,12 @@
+{
+  "name": "cell",
+  "extends": "default",
+  "allowedFontSizes": [6, 7, 8],
+  "allowedFontFamilies": ["Arial", "Arial MT"],
+  "minRasterPPI": 300,
+  "scaleTolerance": 0.5,
+  "maxFigureWidthMm": 174,
+  "maxFigureHeightMm": 203,
+  "figureSizeTolerance": 0.5,
+  "checkEnabled": { "figureSize": true }
+}

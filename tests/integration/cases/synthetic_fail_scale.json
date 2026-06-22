@@ -1,0 +1,12 @@
+{
+  "name": "synthetic_fail_scale",
+  "description": "Text at 98% horizontal scale — should flag at least one scale issue (autoFixable).",
+  "journal": "default",
+  "setup": {
+    "textFrames": [
+      { "contents": "Scaled text",    "size": 7, "font": "ArialMT", "hScale": 98,  "vScale": 100 },
+      { "contents": "Also scaled",    "size": 8, "font": "ArialMT", "hScale": 100, "vScale": 95  },
+      { "contents": "Good text",      "size": 8, "font": "ArialMT", "hScale": 100, "vScale": 100 }
+    ]
+  }
+}

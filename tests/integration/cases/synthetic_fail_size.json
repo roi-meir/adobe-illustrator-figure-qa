@@ -1,0 +1,12 @@
+{
+  "name": "synthetic_fail_size",
+  "description": "Text at 9pt — should flag at least one fontSize issue.",
+  "journal": "default",
+  "setup": {
+    "textFrames": [
+      { "contents": "Too big 9pt",   "size": 9, "font": "ArialMT", "hScale": 100, "vScale": 100 },
+      { "contents": "Also 10pt",     "size": 10, "font": "ArialMT", "hScale": 100, "vScale": 100 },
+      { "contents": "Correct 8pt",   "size": 8, "font": "ArialMT", "hScale": 100, "vScale": 100 }
+    ]
+  }
+}

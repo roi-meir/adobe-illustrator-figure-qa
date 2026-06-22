@@ -1,0 +1,11 @@
+{
+  "name": "nature_neuroscience",
+  "extends": "default",
+  "allowedFontSizes": [5, 6, 7],
+  "allowedFontFamilies": ["Arial", "Arial MT", "Helvetica", "Helvetica Neue"],
+  "minRasterPPI": 300,
+  "maxFigureWidthMm": 180,
+  "maxFigureHeightMm": 170,
+  "figureSizeTolerance": 0.5,
+  "checkEnabled": { "figureSize": true }
+}
