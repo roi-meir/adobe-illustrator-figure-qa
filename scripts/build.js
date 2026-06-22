@@ -6,6 +6,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const vm = require("vm");
 
 const ROOT = path.resolve(__dirname, "..");
 const CORE_DIR = path.join(ROOT, "core");
@@ -29,8 +30,10 @@ for (const file of CORE_ORDER) {
     let content = fs.readFileSync(src, "utf8");
 
     // Strip the Node module.exports guard — not valid in ExtendScript.
+    // Use greedy [\s\S]* so the match extends to the *outer* closing brace
+    // of the if-block, not the first } inside the object literal.
     content = content.replace(
-        /\n?if\s*\(typeof\s+module\s*!==\s*["']undefined["']\)\s*\{[\s\S]*?\}\s*\n?/g,
+        /\n?if\s*\(typeof\s+module\s*!==\s*["']undefined["']\)\s*\{[\s\S]*\}\s*\n?/g,
         "\n"
     );
     // Strip trailing whitespace lines
@@ -44,7 +47,19 @@ fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
 fs.writeFileSync(OUT_FILE, output, "utf8");
 console.log(`Built: ${path.relative(ROOT, OUT_FILE)}`);
 
-// ── 2. Validate journal configs against schema ────────────────────────────────
+// ── 2. Syntax-check the generated file ───────────────────────────────────────
+// vm.Script parses the source without executing it, catching brace mismatches
+// and unexpected tokens before Illustrator ever sees the file.
+try {
+    new vm.Script(output, { filename: path.relative(ROOT, OUT_FILE) });
+    console.log(`Syntax: ${path.relative(ROOT, OUT_FILE)} OK`);
+} catch (err) {
+    console.error(`Syntax error in generated file:\n${err.message}`);
+    fs.unlinkSync(OUT_FILE); // remove the broken file so it isn't accidentally used
+    process.exit(1);
+}
+
+// ── 3. Validate journal configs against schema ────────────────────────────────
 
 let Ajv;
 try {
