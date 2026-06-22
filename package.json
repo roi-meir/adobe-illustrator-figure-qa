@@ -1,5 +1,5 @@
 {
-  "name": "illustrator-figure-qa",
+  "name": "adobe-illustrator-figure-qa",
   "version": "0.1.0",
   "description": "Figure QA utility for Adobe Illustrator: checks font size, font family, scale, and raster PPI.",
   "license": "MIT",

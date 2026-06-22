@@ -3,8 +3,8 @@
 ## Setup
 
 ```bash
-git clone https://github.com/roi-lab/illustrator-figure-qa.git
-cd illustrator-figure-qa
+git clone https://github.com/roi-meir/adobe-illustrator-figure-qa.git
+cd adobe-illustrator-figure-qa
 npm install
 npm run build
 npm test

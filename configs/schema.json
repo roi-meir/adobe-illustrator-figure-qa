@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/roi-lab/illustrator-figure-qa/configs/schema.json",
+  "$id": "https://github.com/roi-meir/adobe-illustrator-figure-qa/configs/schema.json",
   "title": "Figure QA Config",
   "type": "object",
   "properties": {

@@ -1,4 +1,4 @@
-# illustrator-figure-qa
+# adobe-illustrator-figure-qa
 
 An Adobe Illustrator ExtendScript utility that checks figures for common submission errors:
 
@@ -17,8 +17,8 @@ review, fix, skip, export a JSON report, and re-scan.
 ### 1. Install
 
 ```bash
-git clone https://github.com/roi-lab/illustrator-figure-qa.git
-cd illustrator-figure-qa
+git clone https://github.com/roi-meir/adobe-illustrator-figure-qa.git
+cd adobe-illustrator-figure-qa
 npm install
 npm run build
 bash scripts/install.sh   # symlinks into Illustrator's Scripts folder
